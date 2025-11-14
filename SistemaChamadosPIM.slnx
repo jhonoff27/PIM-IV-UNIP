@@ -1,0 +1,4 @@
+<Solution>
+<Project Path="SistemaChamados.Api/SistemaChamados.Api.csproj" />
+<Project Path="SistemaChamadosWeb/SistemaChamadosWeb.csproj" />
+</Solution>

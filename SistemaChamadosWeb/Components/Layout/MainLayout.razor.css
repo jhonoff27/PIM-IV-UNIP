@@ -1,0 +1,6 @@
+using Microsoft.AspNetCore.Components;
+
+namespace SistemaChamadosWeb.Components.Layout {
+    public partial class MainLayout : LayoutComponentBase {
+    }
+}

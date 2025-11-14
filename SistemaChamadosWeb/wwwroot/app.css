@@ -1,0 +1,196 @@
+/* ================================
+   HERMES BOT - UI OFICIAL
+   Sidebar + Dashboard + Tabelas
+   ================================ */
+
+/* --------- LAYOUT BASE --------- */
+
+.layout-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f6fa;
+}
+
+/* --------- SIDEBAR --------- */
+
+.sidebar {
+    width: 240px;
+    background: #ffffff;
+    border-right: 1px solid #e2e2e2;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+    .sidebar-logo img {
+        width: 160px;
+        height: auto;
+        filter: brightness(0.2);
+    }
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+    .sidebar-menu a {
+        padding: 12px 15px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: 0.2s;
+    }
+
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
+            background: #e8ebf7;
+            color: #2c3e50;
+        }
+
+/* --------- CONTEÚDO --------- */
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* --------- DASHBOARD CARDS --------- */
+
+.dashboard-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    flex: 1;
+    border: 1px solid #eee;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.card-value {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* --------- TABELAS --------- */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+thead tr {
+    background: none;
+}
+
+thead th {
+    padding: 10px;
+    font-weight: 600;
+    text-align: left;
+    color: #555;
+}
+
+tbody tr {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+tbody td {
+    padding: 15px 10px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+tbody tr:hover {
+    background: #f0f4ff;
+}
+
+/* --------- BOTÕES --------- */
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #030213;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background: #1d1a49;
+    }
+
+.btn-secondary {
+    background: #e8ebf7;
+    color: #2c3e50;
+}
+
+    .btn-secondary:hover {
+        background: #d5d9ee;
+    }
+
+/* --------- FORM --------- */
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    background: #fff;
+}
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #030213;
+        outline: none;
+    }
+
+/* --------- UTILITÁRIOS --------- */
+
+.page-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
