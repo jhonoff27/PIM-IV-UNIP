@@ -1,23 +1,77 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="layout-wrapper">
-    <aside class="sidebar">
-        <div class="sidebar-logo">
+<div class="hb-app-shell">
+    <!-- SIDEBAR -->
+    <aside class="hb-sidebar">
+        <div class="hb-sidebar-logo">
+            <!-- aqui usamos o caminho real do arquivo -->
             <img src="img/logo.png" alt="Hermes Bot" />
         </div>
 
-        <nav class="sidebar-menu">
-            <a href="/">Dashboard</a>
-            <a href="/tickets">Tickets</a>
-            <a href="/empresas">Empresas</a>
-            <a href="/solucoes">FAQ / Soluções</a>
-            <a href="/forum">Fórum</a>
-            <a href="/analytics">Analytics</a>
-            <a href="/admin">Admin</a>
+        <nav class="hb-nav">
+            <NavLink href="/" Match="NavLinkMatch.All" class="hb-nav-item">
+                <span class="hb-nav-icon">🏠</span>
+                <span class="hb-nav-label">Dashboard</span>
+            </NavLink>
+
+            <NavLink href="/AbrirChamado" class="hb-nav-item">
+                <span class="hb-nav-icon">🎫</span>
+                <span class="hb-nav-label">Tickets</span>
+            </NavLink>
+
+            <NavLink href="/Empresas" class="hb-nav-item">
+                <span class="hb-nav-icon">🏢</span>
+                <span class="hb-nav-label">Empresas</span>
+            </NavLink>
+
+            <NavLink href="/Faq" class="hb-nav-item">
+                <span class="hb-nav-icon">💡</span>
+                <span class="hb-nav-label">Soluções</span>
+            </NavLink>
+
+            <NavLink href="/MeusChamados" class="hb-nav-item">
+                <span class="hb-nav-icon">📂</span>
+                <span class="hb-nav-label">Meus Chamados</span>
+            </NavLink>
+
+            <NavLink href="/Analytics" class="hb-nav-item">
+                <span class="hb-nav-icon">📊</span>
+                <span class="hb-nav-label">Analytics</span>
+            </NavLink>
+
+            <NavLink href="/Admin" class="hb-nav-item">
+                <span class="hb-nav-icon">⚙️</span>
+                <span class="hb-nav-label">Admin</span>
+            </NavLink>
         </nav>
     </aside>
 
-    <main class="content">
-        @Body
-    </main>
+    <!-- MAIN AREA -->
+    <div class="hb-main">
+        <!-- TOPBAR -->
+        <header class="hb-topbar">
+            <div class="hb-topbar-left">
+                <span class="hb-topbar-title">Dashboard</span>
+            </div>
+
+            <div class="hb-topbar-right">
+                <div class="hb-user-box">
+                    <span class="hb-user-icon">👤</span>
+                    <span class="hb-user-name">João</span>
+                </div>
+
+                <button class="hb-link-button">Sair</button>
+
+                <div class="hb-search">
+                    <span class="hb-search-icon">🔍</span>
+                    <input type="text" placeholder="Pesquisar" />
+                </div>
+            </div>
+        </header>
+
+        <!-- PAGE BODY -->
+        <main class="hb-page-body">
+            @Body
+        </main>
+    </div>
 </div>

@@ -1,31 +1,100 @@
 ﻿@page "/"
 
-<h2 class="title">Dashboard</h2>
+<div class="hb-dashboard">
 
-<div class="stats">
-    <span>🟢 40 Chamados Resolvidos</span>
-    <span>🟡 14 Pendentes</span>
-    <span>🔴 5 Urgentes</span>
-    <span>🔄 2 Atrasados</span>
-</div>
+    <!-- MÉTRICAS SUPERIORES -->
+    <section class="hb-metrics-row">
+        <div class="hb-metric-chip hb-metric-resolvidos">
+            <span class="hb-metric-dot"></span>
+            <span class="hb-metric-text">
+                <strong>40</strong> Chamados Resolvidos
+            </span>
+        </div>
 
-<br />
+        <div class="hb-metric-chip hb-metric-pendentes">
+            <span class="hb-metric-dot"></span>
+            <span class="hb-metric-text">
+                <strong>14</strong> Chamados Pendentes
+            </span>
+        </div>
 
-<div class="card">
-    <h3>Tendência de Chamados (Hoje vs Ontem)</h3>
-    <img src="grafico.png" style="width: 100%; border-radius: 8px;" />
-</div>
+        <div class="hb-metric-chip hb-metric-urgentes">
+            <span class="hb-metric-dot"></span>
+            <span class="hb-metric-text">
+                <strong>5</strong> Chamados Urgentes
+            </span>
+        </div>
 
-<br />
+        <div class="hb-metric-chip hb-metric-atraso">
+            <span class="hb-metric-dot"></span>
+            <span class="hb-metric-text">
+                <strong>2</strong> Chamados em Atraso
+            </span>
+        </div>
 
-<h2>Chamados Críticos 🔥</h2>
+        <div class="hb-dashboard-date">
+            10/05/2025
+        </div>
+    </section>
 
-<div class="card">
-    <ul>
-        <li>#001234 | Servidor Offline | João | 2h</li>
-        <li>#001235 | Sistema Lento | Maria | 1h</li>
-        <li>#001236 | Servidor Offline | José | 2h</li>
-        <li>#001237 | Sistema caiu | Diogo | 2h</li>
-        <li>#001238 | Financeiro Lento | Amanda | 1h</li>
-    </ul>
+    <!-- GRÁFICO -->
+    <section class="hb-card hb-chart-card">
+        <div class="hb-card-header">
+            <span class="hb-card-title">Tendência de Chamados (Hoje vs Ontem)</span>
+        </div>
+        <div class="hb-chart-placeholder">
+            <div class="hb-chart-line hb-chart-line-today"></div>
+            <div class="hb-chart-line hb-chart-line-yesterday"></div>
+
+            <div class="hb-chart-axis">
+                <span>0h</span>
+                <span>2h</span>
+                <span>4h</span>
+                <span>6h</span>
+                <span>8h</span>
+                <span>10h</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAMADOS CRÍTICOS -->
+    <section class="hb-card hb-critical-card">
+        <div class="hb-card-header">
+            <span class="hb-card-title">Chamados Críticos</span>
+            <span class="hb-card-icon">⚠️</span>
+        </div>
+
+        <div class="hb-critical-list">
+            <div class="hb-critical-row">#001234 | Servidor Principal Offline | João S | 2h</div>
+            <div class="hb-critical-row">#001235 | Sistema Financeiro Lento | Maria | 1h</div>
+            <div class="hb-critical-row">#001236 | Servidor Principal Offline | José | 2h</div>
+            <div class="hb-critical-row">#001237 | Caiu o sistema | Diogo | 2h</div>
+            <div class="hb-critical-row">#001238 | Sistema Financeiro Lento | Amanda | 1h</div>
+        </div>
+    </section>
+
+    <!-- BOTÕES GRANDES -->
+    <section class="hb-actions-row">
+        <button class="hb-action-button hb-action-primary">
+            <span class="hb-action-icon">➕</span>
+            <span class="hb-action-text">Novo Chamado</span>
+        </button>
+
+        <button class="hb-action-button">
+            <span class="hb-action-icon">📂</span>
+            <span class="hb-action-text">Meus Chamados</span>
+        </button>
+
+        <button class="hb-action-button">
+            <span class="hb-action-icon">📄</span>
+            <span class="hb-action-text">Relatórios</span>
+        </button>
+    </section>
+
+    <!-- BOLHA DE CHAT -->
+    <button class="hb-chat-floating">
+        💬
+        <span class="hb-chat-badge">3</span>
+    </button>
+
 </div>

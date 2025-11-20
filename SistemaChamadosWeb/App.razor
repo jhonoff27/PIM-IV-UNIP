@@ -1,6 +1,9 @@
 ﻿@using Microsoft.AspNetCore.Components.Routing
 @using SistemaChamadosWeb.Components.Layout
 
+<!-- Carrega o CSS global do Hermes Bot -->
+<link rel="stylesheet" href="app.css" />
+
 <Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData"

@@ -1,0 +1,197 @@
+﻿.hb-dashboard {
+    position: relative;
+}
+
+/* Linha de métricas */
+
+.hb-metrics-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.hb-metric-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: #ffffff;
+    font-size: 0.8rem;
+    box-shadow: 0 6px 12px rgba(15, 23, 42, 0.06);
+}
+
+.hb-metric-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #6b7280;
+}
+
+/* cores das métricas */
+.hb-metric-resolvidos .hb-metric-dot {
+    background: #22c55e;
+}
+
+.hb-metric-pendentes .hb-metric-dot {
+    background: #eab308;
+}
+
+.hb-metric-urgentes .hb-metric-dot {
+    background: #ef4444;
+}
+
+.hb-metric-atraso .hb-metric-dot {
+    background: #6366f1;
+}
+
+.hb-metric-text strong {
+    font-weight: 700;
+}
+
+.hb-dashboard-date {
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Cards genéricos */
+
+.hb-card {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+    .hb-card + .hb-card {
+        margin-top: 1rem;
+    }
+
+.hb-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.hb-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.hb-card-icon {
+    font-size: 1.1rem;
+}
+
+/* Gráfico (placeholder) */
+
+.hb-chart-card {
+    margin-bottom: 1rem;
+}
+
+.hb-chart-placeholder {
+    position: relative;
+    height: 220px;
+    background: #f9fafb;
+    border-radius: 0.65rem;
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.hb-chart-line {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    height: 2px;
+    border-radius: 999px;
+}
+
+.hb-chart-line-today {
+    top: 45%;
+    background: #2563eb;
+}
+
+.hb-chart-line-yesterday {
+    top: 60%;
+    background: #d1d5db;
+}
+
+.hb-chart-axis {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+/* Chamados críticos */
+
+.hb-critical-card {
+    margin-bottom: 1.5rem;
+}
+
+.hb-critical-list {
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    padding: 0.5rem 0.75rem;
+    font-family: "Consolas", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+    font-size: 0.8rem;
+}
+
+.hb-critical-row + .hb-critical-row {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 0.25rem;
+    padding-top: 0.25rem;
+}
+
+/* Botões grandes */
+
+.hb-actions-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.hb-action-button {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 999px;
+    border: 2px solid #111827;
+    background: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+.hb-action-primary {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #f9fafb;
+}
+
+.hb-action-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+}
+
+@media (max-width: 900px) {
+    .hb-metrics-row {
+        gap: 0.5rem;
+    }
+}
